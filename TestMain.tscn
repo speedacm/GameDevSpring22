@@ -1,10 +1,22 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://TestPlayer.tscn" type="PackedScene" id=1]
-[ext_resource path="res://bullet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Bullet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Gun.gd" type="Script" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
 
 [node name="TestMain" type="Node"]
 
+[node name="Gun" type="Position2D" parent="."]
+position = Vector2( 15.9999, 0 )
+scale = Vector2( 0.697194, 0.722252 )
+script = ExtResource( 3 )
+Bullet = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Gun"]
+position = Vector2( 9.91821e-05, 1.38456 )
+scale = Vector2( 0.387945, 0.387945 )
+texture = ExtResource( 4 )
+
 [node name="TestPlayer" parent="." instance=ExtResource( 1 )]
 scale = Vector2( 1.00376, 1 )
-Bullet = ExtResource( 2 )
