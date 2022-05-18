@@ -10,6 +10,7 @@
 position = Vector2( 72.9899, 45.9001 )
 
 [node name="Area2D" type="Area2D" parent="."]
+
 script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="Area2D"]
