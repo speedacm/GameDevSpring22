@@ -24,17 +24,17 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Linux
-        path: Builds/Linux
+        path: build/linux
         if-no-files-found: error
     - name: Upload Windows build
       uses: actions/upload-artifact@v2
       with:
         name: Windows
-        path: Builds/Windows
+        path: build/windows
         if-no-files-found: error
     - name: Upload macOS build
       uses: actions/upload-artifact@v2
       with:
         name: macOS
-        path: Builds/macOS
+        path: build/mac
         if-no-files-found: error
